@@ -1,7 +1,7 @@
 body{
   font-family: sans-serif;
   padding: 0; margin:0;
-  background-color: #f7f7f7;
+  background-color: #ccc;
 }
 
 
@@ -11,102 +11,154 @@ header{
   text-align: center;
   width:100vw;
   font-family: "Arial Black", Gadget, sans-serif;
+  background-color: black;
   font-size: 5vw;
-  color: rgba(20,0,0,0.9); 
+  color: white; 
 }
-
 #burgerIcon{
   height: 300px;
+  background-color: #f7f7f7;
   background-image: url("burger.jpg");
-  background-color: rgba(20,0,0,0.9);
   background-size: contain;
   background-position: center center;
+  background-repeat: no-repeat;
 }
-
 
 
 section{
-    background: rgba(206,72,71,0.9); 
+  display: flex;
+  align-items: top-center;
+  justify-content: center;
+  text-align: center;
+}
+ul{
+  margin:0;
+  /*width:75%;*/
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  padding: 20px 0;
+}
+li{
+  list-style-type: none;
+  padding: 10px 0;
+  letter-spacing: .05vmin;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+li:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+.unEaten-list{
+  width: 50%;
+  color: rgb(206,72,71);
+  background-color: rgb(255, 204, 0);
+  padding-top: 20px;
+} 
+.eaten-list{
+  width: 50%;
+  background-color: rgb(206,72,71);
+  color: rgb(255, 204, 0);
+  padding-top: 20px;
+}
+.unEaten-list:before, 
+.eaten-list:before{
+  content: "Envisioned";
+  background-color: #ccc;
+  color:#333;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 3vw;
+  border: 1px solid #333;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+}
+.eaten-list:before{
+  content: "Devoured";
+}
+
+
+
+
+span{
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 3vw;
+}
+
+.complete-b{
+  background-color: #fff;
+  font-size: 2.5vw;
+  border: 0px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.complete-b:hover{
+  background-color: rgb(206,72,71);
+  color: white;
 }
 
 
 
 h2{
-    font-size: 3vw;
+  padding:0;
+  /*padding-top: 50px;*/
+  margin:0;
+  margin-top:30px;
+  position: relative;
+  text-align: center;
+  width:100vw;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 3vw;
+  color: 000; 
 }
-
-
-ul, li{
-  list-style-type: decimal-leading-zero;
-   /*margin: 0; padding: 0;*/
-   /*list-style-type: numerals;*/
-}
-span{
+footer{
   background-color: #ccc;
-  color:#333;
-  padding: 10px 0;
-  /*border-radius: 10px;*/
-  border: 2px solid #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
-span:before{
-  content: "Burger Type: ";
-   background-color: #333;
-  color:#fff;
-  padding: 10px 20px;
-/*  -webkit-border-top-left-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;*/
+footer form div{
+  padding-top: 20px;
+  font-size: 2vw;
+}
+footer form div input{
+  border-radius: 10px;
 }
 
-span:after{
-  content: " ";
-   background-color: #333;
-  color:#fff;
-  padding: 10px 20px;
-/*  -webkit-border-top-right-radius: 10px;
-  -webkit-border-bottom-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  -moz-border-radius-bottomright: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;*/
+footer form div div{
+  display: flex;
+  justify-content: center;
 }
-
-
-.todo-list {
-  margin-top: 75px;
+.eatenYet{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0,0,0,0.2);
 }
-
-.list-group-item {
-  height: 50px;
-  line-height: 2;
+input{
+  border: 1px solid #333;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 2vw;
 }
-
-input.new-item {
-  width: 75%;
-  height: 35px;
-  margin-top: 25px;
-  margin-right: 25px;
+.add-b{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(31, 122, 31);
+  border: 2px solid #000;
+  color: #fff;
+  font-size: 2.5vw;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 5px 20px;
+  width: 90%;
+  max-width: 400px;
 }
-
-.list-group-item.new-item {
-  height: 100px;
-}
-
-input.new-item:focus {
-  outline: none;
-}
-
-.list-group-item > button.delete {
-  float: right;
-  height: 25px;
-  margin-top: 3px;
-  line-height: 0.5;
-}
-
-.edit {
-  width: 100%;
+.add-b:hover{
+  background-color: rgb(41, 163, 41);
+  text-shadow: 1px 1px 3px #000;
 }

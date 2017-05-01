@@ -18,19 +18,11 @@ var lunches = [
 // Routes
 // =============================================================
 module.exports = function(app) {
-
-  // index route loads view.html
-  app.get("/", function(req, res) {
-  	//original, w js
-    // res.sendFile(path.join(__dirname + "/../public/view.html"));
-
-    //with handlesbars
- 	db.Todo.findAll({}).then(function(db_result) {
-      res.render("index", {todos: db_result});
-    });
-
-  });
-
+	app.get("/", function(req, res) {
+			db.Todo.findAll({}).then(function(db_result) {
+			res.render("index", {todos: db_result});
+		});
+	});
 };
 
 
